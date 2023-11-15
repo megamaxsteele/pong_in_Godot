@@ -1,6 +1,5 @@
 extends Area2D
 
-
 var speed = -300
 var direction = Vector2(1.0,0.0);
 
@@ -11,12 +10,14 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
+	if self.position.y <0:
+		self.direction.y *= -1;
+	
 	direction.normalized()
 	position += direction * speed * delta;
 
 func _on_body_entered(body):
 	
-	
-	if body.name == "playerPaddle":
-		self.direction += body.direction;
+		self.direction -= body.direction;
+		self.direction.x *= -1;
 		#print("gamer")
