@@ -10,9 +10,10 @@ func _ready():
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
-	if self.position.y <0:
+	if self.position.y - $Sprite2D.texture.get_height() / 2 < 0:
 		self.direction.y *= -1;
-	
+	elif self.position.y + $Sprite2D.texture.get_height() / 2 > DisplayServer.window_get_size().y:
+		self.direction.y *= -1
 	direction.normalized()
 	position += direction * speed * delta;
 
