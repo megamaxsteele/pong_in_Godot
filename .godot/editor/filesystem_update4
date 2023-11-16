@@ -1,3 +1,5 @@
-res://ball.tscn
-res://ball.gd
+res://npcPaddle.tscn
+res://npcPaddle.gd
+res://player_paddle.gd
 res://game.tscn
+res://ball.tscn

@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://c1tuao8lr11hv"]
+[gd_scene load_steps=4 format=3 uid="uid://c1tuao8lr11hv"]
 
 [ext_resource type="PackedScene" uid="uid://c873a0b32sxq2" path="res://ball.tscn" id="1_18ilm"]
 [ext_resource type="PackedScene" uid="uid://cn22mesurxbye" path="res://playerPaddle.tscn" id="2_tuxyq"]
+[ext_resource type="PackedScene" uid="uid://c4vj2stxt0n6i" path="res://npcPaddle.tscn" id="3_w0y3g"]
 
 [node name="game" type="Node2D"]
 
@@ -9,5 +10,8 @@
 position = Vector2(549, 294)
 
 [node name="playerPaddle" parent="." instance=ExtResource("2_tuxyq")]
-position = Vector2(93, 308)
+position = Vector2(90, 300)
 speed = 300
+
+[node name="npcPaddle" parent="." instance=ExtResource("3_w0y3g")]
+position = Vector2(1000, 308)
